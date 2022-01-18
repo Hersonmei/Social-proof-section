@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    display: grid;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0 1rem;
+    line-height: 1;
+}
+
+h1 {
+    color: hsl(300, 43%, 22%);
+    margin: 3rem 0 0 0;
+}
+
+h2 {
+    color: hsl(300, 43%, 22%);
+    font-size: 0.81rem;
+    margin-top: 1rem;
+}
+
+
+p{
+    color: hsl(303, 10%, 53%);
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.rate {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(300, 24%, 96%);
+    margin: 15px 0;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+}
+
+.reviews{
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.reviews div{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: flex-end;
+}
+
+.reviews span {
+    color: hsl(333, 80%, 67%);
+}
+.reviews img{
+    width: 3rem;
+    border-radius: 50%;
+    grid-row: 1 / 3;
+}
+
+h3 {
+    color:  hsl(0, 0%, 100%);
+    margin: 0;
+}
+
+.reviews p {
+    color:  hsl(0, 0%, 100%);
+    text-align: left;
+    margin-top: 2rem;
+}
+
+@media (min-width: 376px){
+
+    body{
+        grid-template-columns: 1fr repeat(2, 0.5fr) 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        padding: 2rem;
+    }
+
+    h1{
+        font-size: 2.9rem;
+        text-align: left;
+    }
+
+    .title p{
+        text-align: left;
+        margin-right: -5rem;
+    }
+
+
+    .rates {
+        grid-column: 3 / 5;
+        display: grid;
+    }
+
+    .rate{
+        width: 83%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .rate.item2{
+        margin-left: 50px;
+    }
+
+    .rate.item3{
+        margin-left: 100px;
+    }
+
+    .reviews{
+        grid-row: 2;
+    }
+
+    .reviews.two{
+        grid-column: 2 / 4;
+        margin-top: 25px;
+    }
+
+    .three{
+        grid-column: 4;
+        margin-top: 50px;
+    }
+
+    footer{
+        grid-row: 3;
+        grid-column: 1 / 5;
+    }
+
+    
+}
