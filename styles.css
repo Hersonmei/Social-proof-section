@@ -7,6 +7,9 @@
 
 body {
     font-family: 'Spartan', sans-serif;
+}
+
+main{
     display: grid;
     gap: 16px;
     flex-direction: column;
@@ -81,9 +84,17 @@ h3 {
 @media (min-width: 376px){
 
     body{
+        background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        background-size: 30%, cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    main{
         grid-template-columns: 1fr repeat(2, 0.5fr) 1fr;
         grid-template-rows: repeat(2, 1fr);
         padding: 2rem;
+        height: 80vh;
     }
 
     h1{
@@ -121,11 +132,17 @@ h3 {
 
     .reviews{
         grid-row: 2;
+        
+    }
+
+    .reviews.one{
+        margin-bottom: 50px;
     }
 
     .reviews.two{
         grid-column: 2 / 4;
         margin-top: 25px;
+        margin-bottom: 25px;
     }
 
     .three{
